@@ -1,5 +1,9 @@
-const lolo = (req, res, next)=>{
+const jwt = require('jsonwebtoken');
+
+const authMiddleware = (req, res, next)=>{
+    const token = req.body.headers;
+    console.log('ostras chaval');
     next();
 }
 
-module.exports = lolo; 
+module.exports = authMiddleware; 
